@@ -10,8 +10,10 @@
     
     <!-- MAIN -->
     <main>
-        <div class="info">
-            <h1 id="date"></h1>
+        <div id="info-div">
+            <h3 id="connection">Online</h3>
+            <h4 id="date"></h4>
+            <h2 id="welcome">Hello World</h2>
         </div>
 
         <form class="search-form" action="https://duckduckgo.com/" method="GET">
@@ -73,7 +75,7 @@
                 </symbol>
             </svg>
             <!-- End DuckDuckGo Logo -->
-            <input class="search-form-input" type="search" placeholder="Search with DuckDuckGo" name="q" autofocus>
+            <input class="search-form-input" type="search" placeholder="  Search with DuckDuckGo" name="q" autofocus>
         </form>
 
         <form class="search-form" action="https://www.qwant.com/" method="GET">
@@ -100,9 +102,11 @@
                     fill="#af27cc" />
             </svg>
             <!-- End Quwant logo -->
-            <input class="search-form-input" type="search" placeholder="Search with Qwant" name="q">
+            <input class="search-form-input" type="search" placeholder="  Search with Qwant" name="q">
         </form>
     </main>
+
     <script async type="text/javascript" src="get_date.js"></script>
+    <script async type="text/javascript" src="get_conn.js"></script>
 </body>
 </html>
