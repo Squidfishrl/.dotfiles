@@ -7,18 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- DEFINE SVG ICONS -->
     
     <!-- MAIN -->
     <main>
-
         <div class="info">
-
+            <h1 id="date"></h1>
         </div>
 
         <form class="search-form" action="https://duckduckgo.com/" method="GET">
             <!-- DuckDuckGo Logo -->
-            <svg id="ddg" xmlns="http://www.w3.org/2000/" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65.305 66.305"
+            <svg class="search-engine-icon" xmlns="http://www.w3.org/2000/" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65.305 66.305"
                 fill="#ffffff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
                 <use xlink:href="#B" x=".652" y=".652" />
                 <defs>
@@ -80,7 +78,7 @@
 
         <form class="search-form" action="https://www.qwant.com/" method="GET">
             <!-- Qwant logo -->
-            <svg id="ddg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.305 66.305" stroke="none" stroke-linecap="round"
+            <svg class="search-engine-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.305 66.305" stroke="none" stroke-linecap="round"
                 stroke-linejoin="round" fill="#fff" fill-rule="nonzero">
                 <path
                     d="M50.7544 60.7335c.2931.6071.5861 1.5062 1.2132 1.8623a2.901 2.901 0 0 0 1.4653.188h9.0815a1.49 1.49 0 0 0 1.27-.7182c.2691-.4444.2874-.9968.0482-1.4581l-1.7163-3.2436-3.4946-6.6011a3.343 3.343 0 0 1-.44-.9621s-.1261-.2001.042-.7742c.167-.418 2.2804-4.5827 2.4064-5.0008C61.4882 41.3683 71.93 16.195 42.3 13.6206c.2237.1203.4405.2531.6491.3981a21.092 21.092 0 0 1 6.3191 6.298c3.6846 5.773 4.2807 12.9942 1.6002 19.3033-.4394 1.0324-.9643 2.0264-1.5692 2.9715a20.525 20.525 0 0 1-3.7247 4.3527 2.183 2.183 0 0 0-.7741.9621c-.116.3501-.094.7322.063 1.0672z"
@@ -105,5 +103,6 @@
             <input class="search-form-input" type="search" placeholder="Search with Qwant" name="q">
         </form>
     </main>
+    <script async type="text/javascript" src="get_date.js"></script>
 </body>
 </html>

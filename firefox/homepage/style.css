@@ -11,10 +11,12 @@ body {
     justify-content: center;
     height: 15vh;
     background-color: gray; /* DEBUG */
-
+    border: 1px solid;
+    border-color: red;
+    border-width: thin;
 }
 
-#ddg {
+.search-engine-icon {
     display: inline;
     height: 10vh;
     width: 10vw;
@@ -29,4 +31,8 @@ body {
     border-width: 10%;
     border-color: rgb(255, 255, 255);
     vertical-align: bottom;
+}
+
+#date {
+    color: darkred;
 }
