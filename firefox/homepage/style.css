@@ -1,0 +1,32 @@
+body {
+    background-color: black;  /* TODO Change */
+    border: 1px solid orange;
+}
+
+
+.search-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    background-color: gray; /* DEBUG */
+
+}
+
+#ddg {
+    display: inline;
+    height: 10vh;
+    width: 10vw;
+    margin-right: 1%;
+}
+
+.search-form-input {
+    justify-content: center;
+    width: 70%;
+    height: 40%;
+    background-color: gray; /* TODO Change */
+    border-width: 10%;
+    border-color: rgb(255, 255, 255);
+    vertical-align: bottom;
+}
