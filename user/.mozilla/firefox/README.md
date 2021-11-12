@@ -3,9 +3,9 @@
 ![failed to load image](assets/preview.png)
 
 # Homepage Setup
-- after cloning the repo move /homepage to ```<user>/.mozilla/firefox``` or ```<user>/.mozilla/firefox/<profile>```
+- after cloning the repo move /homepage to ```$HOME/.mozilla/firefox``` or ```~/.mozilla/firefox/<profile>```
 - make sure firefox isn't running
-- to open the html file on startup add this line to ```<user>/.mozilla/firefox/<profile>/prefs.js``` :
+- to open the html file on startup add this line to ```$HOME/.mozilla/firefox/<profile>/prefs.js``` :
 ~~~js
 user_pref("browser.startup.homepage", <html file location>);
 ~~~
