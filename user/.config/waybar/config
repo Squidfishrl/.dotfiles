@@ -1,0 +1,67 @@
+// Wiki -> https://github.com/Alexays/Waybar/wiki/
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar"],
+    "modules-center": ["cpu", "disk", "memory"],
+    "modules-right": ["network", "pulseaudio", "sway/language", "clock"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "sway/language": {
+	"format": "{shortDescription}",
+	"tooltip-format": "{long}"
+    },
+    "clock": {
+	"interval": 1,
+	"timezone": "Europe/Sofia",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%Y-%m-%d  %H:%M:%S}"
+    },
+    "wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+	"on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "memory": {
+	"interval": 1,
+	"format": "{used:0.2f}GiB",
+	"tooltip-format": "{used:0.3f}GiB/{total:0.3f}GiB",
+	"states": {
+	    "warning": 75,
+	    "critical": 90
+	}
+    },
+    "cpu": {
+	"interval": 1,
+	"format": "{usage}% {load:0.2f} {avg_frequency:0.2f}GHz",
+	"states": {
+	    "warning": 75,
+	    "critical": 90
+	}
+    },
+    "disk": {
+	"interval": 60,
+	"format": "{free}",
+	"path": "/",
+	"tooltip-format": "{used}/{total}",
+	"states": {
+	   "warning": 75,
+	   "critical": 90
+	}
+    },
+    "network": {
+	"interval": 1,
+	"format": "U {bandwidthUpBits}  D {bandwidthDownBits}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+	"format": "{volume}%",
+	"tooltip-format": "{desc}"
+    }
+}
