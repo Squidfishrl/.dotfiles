@@ -1,0 +1,7 @@
+set(0, 'defaultaxescolor', [0 0 0])
+set(0, 'defaultaxesxcolor', [0.6160 0 0])
+set(0, 'defaultaxesycolor', [0.6160 0 0])
+set(0, 'defaultaxeszcolor', [0.6160 0 0])
+set(0, 'defaultfigurecolor', [0 0 0])
+set(0, 'defaultlinecolor', [0.6160 0 0])
+set(0, 'defaulttextcolor', [0.6160 0 0])
