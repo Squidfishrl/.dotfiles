@@ -6,24 +6,26 @@
 
 ### Variables
 #
+# Disable xwayland
+xwayland disable
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term terminator 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | j4-dmenu-desktop --dmenu='bemenu -i --no-overlap  --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='termite' | xargs swaymsg exec --
+set $menu dmenu_path | j4-dmenu-desktop --dmenu='bemenu -i --no-overlap  --nb "#000000" --nf "#5C0707" --fn "pango:DejaVu Sans Mono 12"' --term='terminator' | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/sway/red_planet.jpg fill
 #
 # Example configuration:
 #
@@ -33,12 +35,11 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 ### Idle configuration
 #
-# Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+	  timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -208,8 +209,31 @@ bar {
 }
 
 #
+# Colors #93cee9
+#
+# class                     border  backgr. text  indicator child_border
+    client.focused          #500404 #751111 #000000 #500404 #500404
+    client.focused_inactive #000000 #000000 #000000 #000000 #000000
+    client.unfocused        #000000 #000000 #000000 #000000 #000000
+    client.urgent           #2f343a #900000 #ffffff #900000 #900000 
+
+#
 # Launch Panel: (lavalauncher)
-# todo: remove or add as bar for ex, waybar->bottom and lavalauncher->top 
+#
 exec lavalauncher
+
+# 
+# Fix gtk applications taking 20 sec to startj
+# This is due to GTK+ waiting for xdg-desktop-portak to start via D-Bus.
+# This times out because the D-Bus activated service doesn't know what WAYLAND_DISPLAY is connected to
+#
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+#
+# Change autotiling window placement
+#
+
 
 include /etc/sway/config.d/*

@@ -2,8 +2,8 @@
 {
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "wlr/taskbar"],
-    "modules-center": ["cpu", "disk", "memory"],
-    "modules-right": ["network", "pulseaudio", "sway/language", "clock"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "disk", "memory", "network", "pulseaudio", "sway/language"],
     "sway/window": {
         "max-length": 50
     },
@@ -27,7 +27,7 @@
     },
     "memory": {
 	"interval": 1,
-	"format": "{used:0.2f}GiB",
+	"format": "<big>[</big> {used:0.2f}GiB    <big>]</big>",
 	"tooltip-format": "{used:0.3f}GiB/{total:0.3f}GiB",
 	"states": {
 	    "warning": 75,
@@ -36,7 +36,8 @@
     },
     "cpu": {
 	"interval": 1,
-	"format": "{usage}% {load:0.2f} {avg_frequency:0.2f}GHz",
+	"format": "<big>[</big> {usage}%    <big>]</big>",
+	"tooltip-format": "{usage}% {load:0.2f} {avg_frequency:0.2f}GHz",
 	"states": {
 	    "warning": 75,
 	    "critical": 90
@@ -44,7 +45,7 @@
     },
     "disk": {
 	"interval": 60,
-	"format": "{free}",
+	"format": "<big>[</big> {free}    <big>]</big>",
 	"path": "/",
 	"tooltip-format": "{used}/{total}",
 	"states": {
@@ -54,7 +55,7 @@
     },
     "network": {
 	"interval": 1,
-	"format": "U {bandwidthUpBits}  D {bandwidthDownBits}",
+	"format": "<big>[</big> {bandwidthUpBits}    <big>]</big>     <big>[</big> {bandwidthDownBits}     <big>]</big>",
         "tooltip-format": "{ifname} via {gwaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",

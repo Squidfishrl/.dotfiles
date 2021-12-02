@@ -1,10 +1,28 @@
 [global_config]
+  window_state = hidden
+  borderless = True
+  title_transmit_fg_color = "#e01b24"
+  title_transmit_bg_color = "#000000"
+  title_receive_fg_color = "#e01b24"
+  title_receive_bg_color = "#000000"
   title_inactive_bg_color = "#000000"
 [keybindings]
+  go_up = <Primary>k
+  go_down = <Primary>j
+  go_left = <Primary>h
+  go_right = <Primary>l
 [profiles]
   [[default]]
-    cursor_color = "#aaaaaa"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#3d3846"
     font = Source Code Pro Medium 10
+    foreground_color = "#a51d2d"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#282828:#f9f06b:#98971a:#ff7800:#a51d2d:#b16286:#a51d2d:#a89984:#928374:#fb4934:#c01c28:#c64600:#f66151:#ffbe6f:#4c3e3e:#ebdbb2"
+    use_system_font = False
+    bold_is_bright = True
     copy_on_selection = True
   [[startup]]
     cursor_color = "#aaaaaa"
