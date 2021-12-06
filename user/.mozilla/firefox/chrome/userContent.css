@@ -1,0 +1,224 @@
+:root {
+	/* default colors */
+	--default-text-color: darkred; 
+	--default-background-color: black;
+	--default-border-color: rgb(40, 20, 10);
+	--default-highlight-color: rgb(10, 10, 10);
+
+	/* links */
+	--link-background-color: black; 
+	--link-text-color: rgb(153, 51, 0);
+
+	/* mark */
+	--mark-text-color: rgb(120, 60,0);
+	--mark-background-color: darkred;
+
+	/* input */
+	--input-background-color: rgb(30, 13, 13);
+	--input-text-color: darkred;
+
+	/* path */
+	--path-fill-color: rgb(152, 0, 0);
+
+	/* div */
+	--div-text-color: rgb(70, 0, 0);	
+
+	/* button */
+	--button-border-color: rgb(100, 0, 0);
+	--button-text-color: darkred;
+	--button-background-color: black;
+	/* --button-hover-background-color: rgb(30, 30, 30); */
+
+	/* circle */
+	--circle-fill-color: red;
+	--circle-stroke-color: darkred;  /* border pretty much */
+
+	/* footer - default bg color */
+	
+	/* dd */
+	--dd-text-color: darkred;
+
+	/* li - default bg color */
+	
+	/* pre */
+	--pre-background-color: rgb(16, 16, 16); 
+
+	/* code */
+	--code-background-color: rgb(12, 12, 12);
+	--code-border-color: rgb(14, 14, 14);
+
+	/* text area */
+	--textarea-background-color: rgb(12, 12, 12);
+
+	/* td -default */
+
+	/* th - default */
+
+	/* hr */
+	--hr-border-color: rgb(85, 30, 15);
+	
+	/* nav - default */
+	
+	/* header - default*/
+
+	/* details - default */
+
+	/* marker -default path color */
+}
+
+body {
+	background-image: unset !important;
+	background-color: var(--default-background-color) !important;
+}
+
+div {
+	background: unset !important;	
+	background-image: unset !important;
+	background-color: var(--default-background-color) !important;
+	border-color: var(--default-border-color) !important;
+	color: var(--div-text-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6, span, p, td, #text, summary, legend {
+	color: var(--default-text-color) !important; 
+	border-color: var(--default-border-color) !important;
+	/* background-color: var(--default-background-color) !important; */
+	text-shadow: unset !important;
+}
+
+span {
+	background-color: var(default-highlight-color) !important;
+}
+
+a {
+	background-color: var(--link-background-color) !important;
+	color: var(--link-text-color) !important;
+	border-color: var(--default-border-color) !important;
+	text-shadow: unset !important;
+}
+
+input:not(.search-form-input) {
+	background-color: var(--default-background-color) !important;
+	background: unset !important;
+}	
+
+input {
+	border-color: var(--default-border-color) !important;
+	color: var(--input-text-color) !important;
+	text-shadow: unset !important;
+	box-shadow: unset !important;
+}
+
+form {
+	background-color: var(--default-background-color) !important;
+}
+
+input::placeholder {
+	color: var(--input-text-color) !important;
+}
+
+input:hover {
+	border-color: red;
+}
+
+path:not(.important) {
+	fill: var(--path-fill-color); 
+}
+
+button, select {
+	border-color: var(--button-border-color) !important;
+	color: var(--button-text-color) !important;
+	background-color: var(--button-background-color) !important;
+	background-image: unset !important;
+	text-shadow: unset !important;
+	box-shadow: unset !important;
+}
+
+circle {
+	fill: var(--circle-fill-color) !important;
+	stroke: var(--circle-stroke-color) !important;
+}
+
+mark {
+	color: var(--mark-text-color) !important;
+	background-color: var(--mark-background-color);
+}
+
+footer {
+	background-color: var(--default-background-color) !important;
+}
+
+dd {
+	color: var(--dd-text-color) !important;
+}
+
+li {
+	color: var(--default-text-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+pre {
+	background-color: var(--pre-background-color) !important;
+	color: var(--default-text-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+code {
+	background-color: var(--code-background-color) !important;
+	border-color: var(--code-border-color) !important;
+	color: var(--default-text-color) !important;
+}
+
+textarea {
+	background-color: var(--textarea-background-color) !important;
+	border-color: var(--default-border-color) !important;
+	color: var(--default-text-color) !important;
+}
+
+table, td, th, tr {
+	background-color: unset !important;
+	border-color: var(--default-border-color) !important;
+	color: var(--default-text-color) !important;
+}
+
+hr {
+	border-color: var(--hr-border-color) !important;
+	background-color: var(--hr-border-color) !important;
+}	
+
+nav {
+	background-color: var(--default-background-color) !important;
+	border-color: var(--default-border-color) !important;
+	background-image: unset !important;
+}
+
+header, footer{
+	background-color: var(--default-highlight-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+details {
+	background-color: var(--default-highlight-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+::marker {
+	color: var(--path-fill-color) !important;
+	background-color: var(--path-fill-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+ul {
+	background-color: var(--default-highlight-color) !important;
+}
+
+li {
+	text-shadow: unset !important;
+	background-color: var(--default-background-color) !important;
+	border-color: var(--default-border-color) !important;
+}
+
+iframe {
+	background-color: var(--default-background-color) !important;
+	border-color: var(--default-border-color) !important;
+}
