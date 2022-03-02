@@ -1,0 +1,32 @@
+display server: wayland
+display manager: Ly
+tiling window manager (compositor): sway
+application launcher: bemenu+j4-dmenu-desktop & lavalauncher TODO: update to theme
+status bar: waybar
+terminal emulator: terminator
+display configuration: swaymsg
+multimedia framework: TODO: pipewire
+notification daemon: dunst TODO: config
+session manager: wlogout
+idle management daemon: swayidle
+screen locker: swaylock TODO: switch to swaylock-effects
+screencasting: TODO:
+screenshot: grimshot, check if flameshot is compatible[in a few months and drop grim/slurp]
+clipboard manager: wl-clipboard
+wallpaper: swaybg, maybe try oguri for nice animated ones
+theme: Material-Black-Cherry (4.0)
+resource monitor: btop
+
+fonts: ttf-font-awesome
+browser: librewolf & icecat
+	youtube - invidious local host + mpv
+	reddit - libreddit local host
+
+messanger: telegram
+
+image viewer [command line]: imv
+image modification: swappy(for screenshots), drawing(light weight), gthumb(not as light weight)
+video player [command line]: mpv
+file manager [TUI]: ranger TODO: ranger config + gui alternative
+
+pdf editor: pdf-arranger
