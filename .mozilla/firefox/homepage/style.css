@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(20, 22, 23);
+    /* border: 1px solid orange; */
+}
+
+/* INFO */
+
+#info-div {
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+
+#welcome {
+    text-align: center;
+    color: rgb(144, 142, 142);
+}
+
+#date {
+    color: gray;
+    float: right;
+    margin-right: 2%;
+}
+
+#connection {
+    padding-left: 1%;
+    /* color: rgb(211, 129, 129); get_conn.js changes color*/ 
+    display: inline;
+    /* text-align: center; */
+    float: left;
+}
+
+/* SEARCH ENGINES */
+
+.search-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 13vh;
+    background-color: rgb(20, 22, 23);
+    border: 1px solid;
+    border-width: thin;
+}
+
+.search-engine-icon {
+    display: inline;
+    height: 7vh;
+    width: 7vw;
+    margin-right: 1%;
+}
+
+.search-form-input {
+    justify-content: center;
+    width: 70%;
+    height: 40%;
+    background-color: rgb(37, 40, 41); /* TODO Change */
+    border-width: 10%;
+    border-color: rgb(118, 109, 96);
+    vertical-align: bottom;
+    color: rgb(235, 225, 225);
+    font-size: 120%;
+}
+
+.search-form-input::placeholder {
+    color: white;
+}
+
+/* .input-text {
+    color: aliceblue;
+} */
+
+/* QUICK REF */
+
+.ref-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
+    column-gap: 7%;
+}
+
+.ref-item-container {
+
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+
+    border: 1px solid;
+    border-width: thin;
+
+    text-align: left;
+
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+
+    margin-top: 4%;
+}
+
+.ref-items {
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    
+
+    /* border: 1px solid;  FOR DEBUG */
+}
+
+.ref {
+    padding-top: 2.5%;
+    padding-left: 2%;
+    padding-bottom: 2.5%;
+
+    font-size: large;
+    text-decoration: none;
+    color: rgba(155, 155, 155, 0.746);
+}
+
+.ref_title {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* social medias */
+
+/* #social-media-container {
+    width: 8% !important;
+} */
+
+#social-media-title {
+    color: rgb(204, 65, 65);
+}
+
+/* dev */
+
+/* #dev-container {
+    width: 8% !important;
+} */
+
+#dev-title {
+    color: rgb(141, 156, 55);
+}
+
+/* office/school */
+
+/* #office-container {
+    width: 8% !important;
+} */
+
+#office-title {
+    color: rgb(142, 78, 179);
+}
+
+/* misc */
+
+/* #misc-container {
+    width: 8.5% !important;
+} */
+
+#misc-title {
+    color: rgb(86, 165, 185);
+}
