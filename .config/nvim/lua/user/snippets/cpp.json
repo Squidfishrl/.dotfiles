@@ -1,0 +1,73 @@
+{
+  "Creates a 2D array": {
+    "prefix": "createMatrix",
+    "body": [
+      "${1:type} **createMatrix(size_t rows, size_t cols)",
+      "{",
+        "\t${1:type} **matrix = new ${1:type} *[rows];",
+        "",
+        "\tfor (size_t row = 0; row < rows; ++row) {",
+          "\t\tmatrix[row] = new ${1:type}[cols];",
+        "\t}",
+        "",
+        "\treturn matrix;",
+      "}"
+    ],
+    "description": "Standard matrix allocation function."
+  },
+  "Frees a 2D array": {
+    "prefix": "freeMatrix",
+    "body": [
+      "void freeMatrix(${1:type} **&matrix, size_t rows)",
+      "{",
+        "\tfor (size_t row = 0; row < rows; ++row) {",
+          "\t\tdelete[] matrix[row];",
+          "\t\tmatrix[row] = nullptr;",
+        "\t}",
+        "",
+        "\tdelete[] matrix;",
+        "\tmatrix = nullptr;",
+      "}"
+    ],
+    "description": "Deallocate memory from a matrix. Sets all pointers to nullptr"
+  },
+  "Sets all the cells in a matrix to a value": {
+    "prefix": ["memsetMatrix", "setMatrixValues"],
+    "body": [
+      "void memsetMatrix(${1:type} **matrix, size_t rows, size_t cols, ${1:type} value)",
+      "{",
+        "\tfor (size_t row = 0; row < rows; ++row) {",
+          "\t\tmemset(matrix[row], value, cols);",
+        "\t}",
+      "}"
+    ],
+    "description": "Memset every row in the matrix to the same value"
+  },
+  "Copy the values of one matrix to another": {
+    "prefix": ["memcpyMatrix", "copyMatrix"],
+    "body": [
+      "void memcpyMatrix(${1:type} **dest, const ${1:type} **src, size_t rows, size_t cols)",
+      "{",
+        "\tfor (size_t row = 0; row < rows; ++row) {",
+          "\t\tmemcpy(dest[row], src[row], cols);",
+        "\t}",
+      "}"
+    ],
+    "description": "Memcpy the values of a matrix"
+  },
+  "Print the values of a matrix's cells": {
+    "prefix": ["printMatrix", "displayMatrix"],
+    "body": [
+      "void printMatrix(const ${1:type} **matrix, size_t rows, size_t cols)",
+      "{",
+        "\tfor (size_t row = 0; row < rows; ++row) {",
+          "\t\tstd::cout << '\\n';",
+          "\t\tfor (size_t col = 0; col < cols; ++col) {",
+            "\t\t\tstd::cout << matrix[row][col] << ' ';",
+          "\t\t}",
+        "\t}",
+      "}"
+    ],
+    "description": "Print the value of the matrix to stdout"
+  }
+}
