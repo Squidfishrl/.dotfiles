@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Ivaylo Genchev (SquidFish)
+ * Github : @squidfishrl
+ *
+ * Colors
+ **/
+
+* {
+    background:     #202020;
+    background-alt: #333533;
+    foreground:     #C5C8C6;
+    selected:       #a4161a;
+    active:         #f48c06;
+    urgent:         #ff8354;
+}

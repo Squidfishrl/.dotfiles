@@ -1,0 +1,153 @@
+[global_config]
+  window_state = hidden
+  tab_position = hidden
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, ActivityWatch, TerminalShot
+[keybindings]
+  go_up = <Primary>k
+  go_down = <Primary>j
+  go_left = <Primary>h
+  go_right = <Primary>l
+  preferences_keybindings = ""
+[profiles]
+  [[default]]
+    background_darkness = 0.55
+    background_type = transparent
+    background_image = /home/ivo/Downloads/Telegram Desktop/image_2023-02-07_00-22-22.png
+    font = Source Code Pro Medium 10
+    foreground_color = "#a51d2d"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#282828:#f9f06b:#670000:#ff7800:#a51d2d:#b16286:#a51d2d:#a89984:#928374:#fb4934:#c01c28:#c64600:#f66151:#ffbe6f:#4c3e3e:#e5a50a"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[startup]]
+    exit_action = hold
+  [[presentation]]
+    background_color = "#ffffff"
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#aaaaaa"
+    foreground_color = "#000000"
+    scrollback_infinite = True
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+      profile = default
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[startup]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1680:0
+      maximised = True
+      fullscreen = False
+      size = 2560, 1371
+      title = ivo@pc-ivo:~/.config/neofetch
+      last_active_term = 67944359-e1a7-4258-9dce-da7b232cbe69
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 1023
+      ratio = 0.4003913894324853
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 749
+      ratio = 0.5483162518301611
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = startup
+      uuid = 639d42a3-1b76-4ee2-bd87-def69186623c
+      command = curl wttr.in
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = startup
+      uuid = bc29b484-5bd8-4f56-a7bf-762e25e7db69
+      command = ranger
+    [[[child5]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 853
+      ratio = 0.6244509516837482
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = startup
+      uuid = 846a1270-9191-4c33-b93d-0ef12e9e93b5
+      command = btop
+    [[[child7]]]
+      type = HPaned
+      parent = child5
+      order = 1
+      position = 692
+      ratio = 0.4534731323722149
+    [[[terminal8]]]
+      type = Terminal
+      parent = child7
+      order = 0
+      profile = startup
+      uuid = 67944359-e1a7-4258-9dce-da7b232cbe69
+      command = neofetch
+    [[[child9]]]
+      type = HPaned
+      parent = child7
+      order = 1
+      position = 470
+      ratio = 0.5676328502415459
+    [[[child10]]]
+      type = VPaned
+      parent = child9
+      order = 0
+      position = 182
+      ratio = 0.358974358974359
+    [[[terminal11]]]
+      type = Terminal
+      parent = child10
+      order = 0
+      profile = startup
+      uuid = f2d55771-b8dd-4dc2-a813-f30693162f17
+      command = tty-clock -s -b
+    [[[terminal12]]]
+      type = Terminal
+      parent = child10
+      order = 1
+      profile = startup
+      uuid = bf2101d4-1eae-41ed-b94a-54075a0f4112
+      command = cbonsai -l -i --life=25
+    [[[child13]]]
+      type = VPaned
+      parent = child9
+      order = 1
+      position = 338
+      ratio = 0.6666666666666666
+    [[[terminal14]]]
+      type = Terminal
+      parent = child13
+      order = 0
+      profile = startup
+      uuid = cde0d09c-a225-4e06-9987-ad9cb26e9d6c
+      command = cmatrix -b
+    [[[terminal15]]]
+      type = Terminal
+      parent = child13
+      order = 1
+      profile = startup
+      uuid = a55de8d3-779d-4edb-bcec-23b384552041
+      command = 'echo "Starting full system upgrade.." && sudo pacman -Syu  '
+[plugins]
